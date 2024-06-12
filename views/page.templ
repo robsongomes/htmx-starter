@@ -1,0 +1,36 @@
+package views
+
+templ page() {
+	<!DOCTYPE html>
+	<html lang="en">
+		@head("HTMX Starter")
+		<body class="bg-gray-100">
+			<header class="hero is-primary">
+				<div class="hero-body">
+					<div class="container">
+						<h1 class="title">HTMX Starter</h1>
+					</div>
+				</div>
+			</header>
+			<section class="section">
+				<div class="container">
+					<div class="columns is-centered">
+						<div class="column is-half">
+							{ children... }
+						</div>
+					</div>
+				</div>
+			</section>
+		</body>
+	</html>
+}
+
+templ head(title string) {
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>{ title }</title>
+		<link rel="stylesheet" href="/static/css/bulma.min.css"/>
+		<script src="/static/js/htmx.min.js"></script>
+	</head>
+}
